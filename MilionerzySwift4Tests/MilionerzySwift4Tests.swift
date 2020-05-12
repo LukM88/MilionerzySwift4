@@ -32,8 +32,9 @@ class MilionerzySwift4Tests: XCTestCase {
     
     }
     func testJSON(){
-        assert(!QuestionsAndAnswersJSON.isEmpty)
-    
+        XCTAssertFalse(Menager.getQuestions().isEmpty)
+        XCTAssertFalse(Menager.getQuestions().count==0)
+        
     }
 
 }
