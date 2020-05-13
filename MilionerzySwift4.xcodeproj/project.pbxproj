@@ -14,6 +14,8 @@
 		704A6547246AA90800401FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704A6545246AA90800401FD6 /* LaunchScreen.storyboard */; };
 		704A6552246AA90800401FD6 /* MilionerzySwift4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A6551246AA90800401FD6 /* MilionerzySwift4Tests.swift */; };
 		704A655D246AA97800401FD6 /* JSONObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A655C246AA97800401FD6 /* JSONObj.swift */; };
+		70A99E94246AE6370069FE1C /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99E92246AE6370069FE1C /* ViewController2.swift */; };
+		70A99E95246AE6370069FE1C /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A99E93246AE6370069FE1C /* ViewController2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		704A6551246AA90800401FD6 /* MilionerzySwift4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilionerzySwift4Tests.swift; sourceTree = "<group>"; };
 		704A6553246AA90800401FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		704A655C246AA97800401FD6 /* JSONObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObj.swift; sourceTree = "<group>"; };
+		70A99E92246AE6370069FE1C /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		70A99E93246AE6370069FE1C /* ViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				704A6545246AA90800401FD6 /* LaunchScreen.storyboard */,
 				704A6548246AA90800401FD6 /* Info.plist */,
 				704A655C246AA97800401FD6 /* JSONObj.swift */,
+				70A99E92246AE6370069FE1C /* ViewController2.swift */,
+				70A99E93246AE6370069FE1C /* ViewController2.xib */,
 			);
 			path = MilionerzySwift4;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704A6547246AA90800401FD6 /* LaunchScreen.storyboard in Resources */,
+				70A99E95246AE6370069FE1C /* ViewController2.xib in Resources */,
 				704A6544246AA90800401FD6 /* Assets.xcassets in Resources */,
 				704A6542246AA90500401FD6 /* Main.storyboard in Resources */,
 			);
@@ -201,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704A653F246AA90500401FD6 /* ViewController.swift in Sources */,
+				70A99E94246AE6370069FE1C /* ViewController2.swift in Sources */,
 				704A655D246AA97800401FD6 /* JSONObj.swift in Sources */,
 				704A653D246AA90500401FD6 /* AppDelegate.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    let buttons:[String]=["Menu","Wyjście"]
+    let buttons:[String]=["Start","Wyjście"]
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var cell: UITableViewCell!
@@ -44,10 +44,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            let Questions=Menager.getQuestions()
-            for Question in Questions{
-                print(Question)
-            }
+            
+            performSegue(withIdentifier: "startPlaying", sender: nil)
+            
         default:
             exit(0)
         }
