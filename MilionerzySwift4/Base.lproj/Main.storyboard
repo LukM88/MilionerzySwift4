@@ -48,7 +48,7 @@
             <objects>
                 <viewController id="pye-ms-Nam" customClass="ViewController2" customModule="MilionerzySwift4" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goBack" id="Xmo-aq-UTA"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goBack" id="Xmo-aq-UTA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPi-GS-Nyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
