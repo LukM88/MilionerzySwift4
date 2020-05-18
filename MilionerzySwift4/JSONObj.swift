@@ -44,113 +44,113 @@ let JSON = """
 },
 {
 "QNum": 4,
-"Question": "4",
+"Question": "Który z języków do pisania stron internetowych wykonuje się po stronie serwera?",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "HTML"},
+{"b": "CSS"},
+{"c": "PHP"},
+{"d": "JS"}
 ],
-"Corect": 3
+"Corect": 2
 },
 {
 "QNum": 5,
-"Question": "5",
+"Question": "Jakiego koloru jest czerwony maluch",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "różowy"},
+{"b": "czerwony"},
+{"c": "fioletowy"},
+{"d": "ecru"}
 ],
-"Corect": 3
+"Corect": 1
 },
 {
 "QNum": 6,
-"Question": "6",
+"Question": "Jan ma 4 lata i 2 siostry każda ma 5 lat ile lat ma jan?",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "4"},
+{"b": "5"},
+{"c": "7"},
+{"d": "8"}
 ],
-"Corect": 3
+"Corect": 0
 },
 {
 "QNum": 7,
-"Question": "7",
+"Question": "Do jakiego rodzaju literatury zalicza się Romeo i Julia",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "Epika"},
+{"b": "Dramat"},
+{"c": "Liryka"},
+{"d": "Muzikal"}
 ],
-"Corect": 3
+"Corect": 1
 },
 {
 "QNum": 8,
-"Question": "8",
+"Question": "Ukleja to ",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "Gad"},
+{"b": "Ptak"},
+{"c": "Ryba"},
+{"d": "Ssak"}
 ],
-"Corect": 3
+"Corect": 2
 },
 {
 "QNum": 9,
-"Question": "7",
+"Question": "Jak nazywa się wiecznie młoda gwiazda telewizji",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "Arnold Schwarzenegger"},
+{"b": " Sylvester Stallone"},
+{"c": "Tom Crise"},
+{"d": "Krzysztof Ibisz"}
 ],
 "Corect": 3
 },
 {
 "QNum": 10,
-"Question": "7",
+"Question": "Na świecie znajduje się obecnie...",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "Ponad 7.5 miliarda"},
+{"b": "Ponad 8 miliardów"},
+{"c": "Około 6 miliardów"},
+{"d": "mniej niż 7.5 miliarda"}
 ],
-"Corect": 3
+"Corect": 0
 },
 {
 "QNum": 11,
-"Question": "7",
+"Question": "W którym roku wybuchła pierwsza bomba atomowa?",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "1944"},
+{"b": "1938"},
+{"c": "1945"},
+{"d": "1943"}
 ],
-"Corect": 3
+"Corect": 2
 },
 {
 "QNum": 12,
-"Question": "7",
+"Question": "Ile jest pytań w tym quizie",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "13"},
+{"b": "12"},
+{"c": "9"},
+{"d": "10"}
 ],
-"Corect": 3
+"Corect": 1
 },
 {
 "QNum": 13,
-"Question": "7",
+"Question": "Kontynent Mu według teori leżał na terenie oceanu:",
 "Answers" : [
-{"a": "Znalezienie sposobu na realizację"},
-{"b": "Zmuszenie się do pisania"},
-{"c": "Testowanie"},
-{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+{"a": "Spokojnego"},
+{"b": "Arktycznego"},
+{"c": "Indyjskiego"},
+{"d": "Atlantyckiego"}
 ],
-"Corect": 3
+"Corect": 0
 }
 ]
 """

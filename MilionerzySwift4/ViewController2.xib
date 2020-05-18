@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController2" customModule="MilionerzySwift4" customModuleProvider="target">
             <connections>
                 <outlet property="answersList" destination="42V-dh-jyf" id="A1N-9o-vWL"/>
+                <outlet property="crudeBtn" destination="z69-nJ-MBq" id="NiI-Ur-QDJ"/>
+                <outlet property="pnpButton" destination="aFz-9P-HMQ" id="x3h-Ov-Bi6"/>
                 <outlet property="progres" destination="15c-5o-l4J" id="ci6-AM-Kg0"/>
                 <outlet property="questionLabel" destination="Tgq-9d-Yzd" id="I5M-DK-rbV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,6 +28,9 @@
                     <rect key="frame" x="161" y="603" width="42" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="50/50"/>
+                    <connections>
+                        <action selector="polnapolClick:" destination="-1" eventType="touchUpInside" id="GLE-RB-qFc"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTG-gW-KUS">
                     <rect key="frame" x="264" y="603" width="51" height="30"/>
@@ -52,6 +57,9 @@
                     <rect key="frame" x="53" y="603" width="83" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Publiczność"/>
+                    <connections>
+                        <action selector="crudeVoting:" destination="-1" eventType="touchUpInside" id="qrE-oo-YKf"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

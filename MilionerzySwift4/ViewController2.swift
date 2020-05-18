@@ -11,6 +11,8 @@ import UIKit
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var pnpButton: UIButton!
+    @IBOutlet weak var crudeBtn: UIButton!
     
     @IBOutlet weak var progres: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -131,6 +133,43 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             completion()
         }
     }
-
+    @IBAction func polnapolClick(_ sender: Any) {
+        var x = data[numbers[i]].Corect
+        var y = data[numbers[i]].Corect
+        while(x == data[numbers[i]].Corect || y==data[numbers[i]].Corect || x==y){
+            x=Int.random(in: 0...3)
+            y=Int.random(in: 0...3)
+        }
+        answersList.cellForRow(at: [0,x])?.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        answersList.cellForRow(at: [0,y])?.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        pnpButton.isEnabled=false
+    }
+    @IBAction func crudeVoting(_ sender: Any) {
+        var ans = [0,0,0,0]
+        var x=100
+        
+        ans[0]=Int.random(in: 1...x-2)
+        x-=ans[0]
+        ans[1]=Int.random(in: 1...x-1)
+        x-=ans[1]
+        ans[2]=Int.random(in: 1...x)
+        x-=ans[2]
+        ans[3]=x
+        var temp=0
+        var temp2=0
+        while temp<ans.count-1 {
+            if(ans[temp2]<ans[temp+1]){
+                temp2=temp+1
+            }
+            temp+=1
+        }
+        temp=ans[data[numbers[i]].Corect]
+        ans[data[numbers[i]].Corect]=ans[temp2]
+        ans[temp2]=temp
+        
+        questionLabel.text="Publiczność zagłosowała:\n A:\(ans[0])%, B:\(ans[1])%, C:\(ans[2])%, D:\(ans[3])%"
+        crudeBtn.isEnabled=false
+    }
+    
 }
 
