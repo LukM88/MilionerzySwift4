@@ -36,5 +36,6 @@ class MilionerzySwift4Tests: XCTestCase {
         XCTAssertFalse(Menager.getQuestions().count==0)
         
     }
+   
 
 }
