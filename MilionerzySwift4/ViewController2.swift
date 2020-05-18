@@ -191,7 +191,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             break
         default:
             break
-           // telButt.isEnabled=false
+            telButt.isEnabled=false
         }
     }
     
