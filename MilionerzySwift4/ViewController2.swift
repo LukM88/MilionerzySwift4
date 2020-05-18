@@ -176,6 +176,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         }else{
             x=Int.random(in: 0...3)
         }
+         telButt.isEnabled=false
         switch x{
         case 0:
             questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to A"
@@ -191,7 +192,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             break
         default:
             break
-            telButt.isEnabled=false
+           
         }
     }
     
