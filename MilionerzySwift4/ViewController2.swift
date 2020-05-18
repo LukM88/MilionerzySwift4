@@ -9,11 +9,9 @@
 import UIKit
 
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
+    @IBOutlet weak var telButt: UIButton!
     @IBOutlet weak var pnpButton: UIButton!
     @IBOutlet weak var crudeBtn: UIButton!
-    
     @IBOutlet weak var progres: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answersList: UITableView!
@@ -169,6 +167,32 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         questionLabel.text="Publiczność zagłosowała:\n A:\(ans[0])%, B:\(ans[1])%, C:\(ans[2])%, D:\(ans[3])%"
         crudeBtn.isEnabled=false
+    }
+    @IBAction func telefonDoPrzyjaciela(_ sender: Any) {
+        var x=0
+        
+        if(Float.random(in: 0...1)>0.25){
+            x=data[numbers[i]].Corect
+        }else{
+            x=Int.random(in: 0...3)
+        }
+        switch x{
+        case 0:
+            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to A"
+            break
+        case 1:
+            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to B"
+            break
+        case 2:
+            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to C"
+            break
+        case 3:
+            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to D"
+            break
+        default:
+            break
+           // telButt.isEnabled=false
+        }
     }
     
 }

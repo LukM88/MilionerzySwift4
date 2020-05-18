@@ -16,6 +16,7 @@
                 <outlet property="pnpButton" destination="aFz-9P-HMQ" id="x3h-Ov-Bi6"/>
                 <outlet property="progres" destination="15c-5o-l4J" id="ci6-AM-Kg0"/>
                 <outlet property="questionLabel" destination="Tgq-9d-Yzd" id="I5M-DK-rbV"/>
+                <outlet property="telButt" destination="dTG-gW-KUS" id="t8f-Y8-3iR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,6 +37,9 @@
                     <rect key="frame" x="264" y="603" width="51" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Telefon"/>
+                    <connections>
+                        <action selector="telefonDoPrzyjaciela:" destination="-1" eventType="touchUpInside" id="Wpy-Fm-XhC"/>
+                    </connections>
                 </button>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.083000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="15c-5o-l4J">
                     <rect key="frame" x="53" y="116" width="259" height="3"/>
