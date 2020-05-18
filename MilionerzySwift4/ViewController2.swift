@@ -51,7 +51,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! UITableViewCell
         
         // set the text from the data model
-        cell.textLabel?.text = self.data[numbers[i]].Answers[indexPath.row][data[0].Answers[indexPath.row].keys.first!.description]
+        cell.textLabel?.text = self.data[numbers[i]].Answers[indexPath.row].values.first
         cell.textLabel?.textAlignment = NSTextAlignment.left
         cell.textLabel?.numberOfLines=3
         cell.backgroundColor=#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -60,8 +60,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row == data[numbers[i]].Corect && i<11){
-            
+        if(tableView.cellForRow(at: indexPath)?.textLabel?.text == data[numbers[i]].Answers[data[numbers[i]].Corect].values.first?.description && i<11){
+            print()
+            print()
             progres.progress+=0.083
             answersList.cellForRow(at: indexPath)?.backgroundColor=#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             answersList.cellForRow(at: indexPath)?.isSelected=false

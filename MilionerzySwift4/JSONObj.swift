@@ -159,13 +159,33 @@ class Menager{
         
         let QNum: Int
         let Question: String
-        let Answers: Array<Dictionary<String,String>>
-        let Corect: Int
+        var Answers: Array<Dictionary<String,String>>
+        var Corect: Int
     }
     
     static func getQuestions() -> [Questions]{
         let questionData = Data(JSON.data(using: .utf8)!)
-        let questions: [Questions] = try! JSONDecoder().decode([Questions].self, from: questionData)
+        var questions: [Questions] = try! JSONDecoder().decode([Questions].self, from: questionData)
+       var i = 0
+        while i<questions.count {
+            var q = questions[i].Answers[questions[i].Corect]
+            var j = 0
+            questions[i].Answers = questions[i].Answers.shuffled()
+            while j<questions[i].Answers.count {
+                
+                
+                if(questions[i].Answers[j].values.elementsEqual(q.values)){
+                   
+                    
+                    questions[i].Corect=j
+                    break
+                }
+                j+=1
+            }
+            i+=1
+        }
+        
+    
         return questions
     }
 }
