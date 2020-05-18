@@ -96,6 +96,61 @@ let JSON = """
 {"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
 ],
 "Corect": 3
+},
+{
+"QNum": 9,
+"Question": "7",
+"Answers" : [
+{"a": "Znalezienie sposobu na realizację"},
+{"b": "Zmuszenie się do pisania"},
+{"c": "Testowanie"},
+{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+],
+"Corect": 3
+},
+{
+"QNum": 10,
+"Question": "7",
+"Answers" : [
+{"a": "Znalezienie sposobu na realizację"},
+{"b": "Zmuszenie się do pisania"},
+{"c": "Testowanie"},
+{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+],
+"Corect": 3
+},
+{
+"QNum": 11,
+"Question": "7",
+"Answers" : [
+{"a": "Znalezienie sposobu na realizację"},
+{"b": "Zmuszenie się do pisania"},
+{"c": "Testowanie"},
+{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+],
+"Corect": 3
+},
+{
+"QNum": 12,
+"Question": "7",
+"Answers" : [
+{"a": "Znalezienie sposobu na realizację"},
+{"b": "Zmuszenie się do pisania"},
+{"c": "Testowanie"},
+{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+],
+"Corect": 3
+},
+{
+"QNum": 13,
+"Question": "7",
+"Answers" : [
+{"a": "Znalezienie sposobu na realizację"},
+{"b": "Zmuszenie się do pisania"},
+{"c": "Testowanie"},
+{"d": "Szukanie tutoriali które nie odnoszą się do GitHuba"}
+],
+"Corect": 3
 }
 ]
 """
