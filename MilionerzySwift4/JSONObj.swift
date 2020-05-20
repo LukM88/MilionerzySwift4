@@ -226,6 +226,24 @@ class Menager{
             i+=1
             j+=12
         }
+        i = 0
+        while i<questions.count {
+            var q = questions[i].Answers[questions[i].Corect]
+            var j = 0
+            questions[i].Answers = questions[i].Answers.shuffled()
+            while j<questions[i].Answers.count {
+                
+                
+                if(questions[i].Answers[j].values.elementsEqual(q.values)){
+                    
+                    
+                    questions[i].Corect=j
+                    break
+                }
+                j+=1
+            }
+            i+=1
+        }
     
         
        return questions
