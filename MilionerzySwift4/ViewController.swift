@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    let buttons:[String]=["Start","Wyjście"]
+    let buttons:[String]=["Start","Tabela wyników","Wyjście"]
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var cell: UITableViewCell!
@@ -46,6 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 0:
             
             performSegue(withIdentifier: "startPlaying", sender: nil)
+        case 1: break
             
         default:
             exit(0)

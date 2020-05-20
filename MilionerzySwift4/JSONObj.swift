@@ -156,7 +156,6 @@ let JSON = """
 """
 class Menager{
     struct Questions: Decodable {
-        
         let QNum: Int
         let Question: String
         var Answers: Array<Dictionary<String,String>>
@@ -185,7 +184,50 @@ class Menager{
             i+=1
         }
         
-    
+        
         return questions
+    }
+    
+    static func getQuestionsFromFile()->[Questions]{
+        
+        let fileURLProject = Bundle.main.path(forResource: "data1", ofType: "txt")
+        var readStringProject = ""
+        do{
+            readStringProject = try String(contentsOfFile: fileURLProject!,encoding: String.Encoding.unicode)
+        }catch let error as NSError{
+            print(error.localizedDescription)
+        }
+        var read = readStringProject.components(separatedBy: .newlines)
+        print(read[1])
+        var i = 0
+        var j = 0
+        var questions = getQuestions();
+        while(i<89){
+            let miniJSON =
+            """
+            {
+            "QNum": \(questions[questions.count-1].QNum+i+1),
+            "Question": "\(read[0+j])",
+            "Answers" : [
+            {"a": "\(read[2+j])"},
+            {"b": "\(read[4+j])"},
+            {"c": "\(read[6+j])"},
+            {"d": "\(read[8+j])"}
+            ],
+            "Corect": \(read[10+j])
+            }
+            """
+            var questionData = Data(miniJSON.data(using: .utf8)!)
+            do{
+            questions.append(try! JSONDecoder().decode(Questions.self, from: questionData))
+            }catch let error as NSError{
+                print(error.localizedDescription)
+            }
+            i+=1
+            j+=12
+        }
+    
+        
+       return questions
     }
 }

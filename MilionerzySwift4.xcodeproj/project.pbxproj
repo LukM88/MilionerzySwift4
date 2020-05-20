@@ -16,6 +16,7 @@
 		704A655D246AA97800401FD6 /* JSONObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A655C246AA97800401FD6 /* JSONObj.swift */; };
 		70A99E94246AE6370069FE1C /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99E92246AE6370069FE1C /* ViewController2.swift */; };
 		70A99E95246AE6370069FE1C /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A99E93246AE6370069FE1C /* ViewController2.xib */; };
+		70FB27B1247597B80043E104 /* data1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 70FB27B0247597B80043E104 /* data1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		704A655C246AA97800401FD6 /* JSONObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObj.swift; sourceTree = "<group>"; };
 		70A99E92246AE6370069FE1C /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		70A99E93246AE6370069FE1C /* ViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
+		70FB27B0247597B80043E104 /* data1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		704A653B246AA90500401FD6 /* MilionerzySwift4 */ = {
 			isa = PBXGroup;
 			children = (
+				70FB27B0247597B80043E104 /* data1.txt */,
 				704A653C246AA90500401FD6 /* AppDelegate.swift */,
 				704A653E246AA90500401FD6 /* ViewController.swift */,
 				704A6540246AA90500401FD6 /* Main.storyboard */,
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704A6547246AA90800401FD6 /* LaunchScreen.storyboard in Resources */,
+				70FB27B1247597B80043E104 /* data1.txt in Resources */,
 				70A99E95246AE6370069FE1C /* ViewController2.xib in Resources */,
 				704A6544246AA90800401FD6 /* Assets.xcassets in Resources */,
 				704A6542246AA90500401FD6 /* Main.storyboard in Resources */,

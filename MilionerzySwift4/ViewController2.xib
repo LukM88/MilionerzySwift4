@@ -13,8 +13,10 @@
             <connections>
                 <outlet property="answersList" destination="42V-dh-jyf" id="A1N-9o-vWL"/>
                 <outlet property="crudeBtn" destination="z69-nJ-MBq" id="NiI-Ur-QDJ"/>
+                <outlet property="gwarantowany" destination="IK3-oX-viK" id="jsD-u3-bdB"/>
                 <outlet property="pnpButton" destination="aFz-9P-HMQ" id="x3h-Ov-Bi6"/>
                 <outlet property="progres" destination="15c-5o-l4J" id="ci6-AM-Kg0"/>
+                <outlet property="qNumLabel" destination="w33-XQ-diD" id="i4K-MN-a6u"/>
                 <outlet property="questionLabel" destination="Tgq-9d-Yzd" id="I5M-DK-rbV"/>
                 <outlet property="telButt" destination="dTG-gW-KUS" id="t8f-Y8-3iR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -65,6 +67,27 @@
                         <action selector="crudeVoting:" destination="-1" eventType="touchUpInside" id="qrE-oo-YKf"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-oX-viK">
+                    <rect key="frame" x="56" y="641" width="259" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkW-Cl-Hbr">
+                    <rect key="frame" x="320" y="98" width="29" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w33-XQ-diD">
+                    <rect key="frame" x="26" y="98" width="19" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

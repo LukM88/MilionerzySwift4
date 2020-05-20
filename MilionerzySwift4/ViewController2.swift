@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var qNumLabel: UILabel!
+    @IBOutlet weak var gwarantowany: UILabel!
     @IBOutlet weak var telButt: UIButton!
     @IBOutlet weak var pnpButton: UIButton!
     @IBOutlet weak var crudeBtn: UIButton!
@@ -16,12 +18,15 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answersList: UITableView!
     var cellReuseIdentifier = "cell"
-    let data = Menager.getQuestions()
+    var data = Menager.getQuestionsFromFile()
+    
     var numbers = Array<Int>()
     var i = 0
     var gwarantowana = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        qNumLabel.text="\(i+1)"
         if(numbers.count==0){
         numbers.append(Int.random(in: 0...data.count-1))
         }
@@ -31,6 +36,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         answersList.delegate = self
         answersList.dataSource = self
         answersList.rowHeight = 80
+        gwarantowany.text="GWARANTOWANA SUMA: \(gwarantowana)"
         var x = Int.random(in: 0...data.count-1)
         var iterator = 0
         while(iterator<12){
@@ -60,6 +66,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if(tableView.cellForRow(at: indexPath)?.textLabel?.text == data[numbers[i]].Answers[data[numbers[i]].Corect].values.first?.description && i<11){
             print()
             print()
@@ -67,15 +74,19 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             answersList.cellForRow(at: indexPath)?.backgroundColor=#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             answersList.cellForRow(at: indexPath)?.isSelected=false
             self.i+=1
+            qNumLabel.text="\(i+1)"
             switch(i){
             case 3:
                 gwarantowana=1000
+                gwarantowany.text="GWARANTOWANA SUMA: \(gwarantowana)"
                 break
             case 6:
-                gwarantowana=100000
+                gwarantowana=10000
+                gwarantowany.text="GWARANTOWANA SUMA: \(gwarantowana)"
                 break
             case 9:
-                gwarantowana=500000
+                gwarantowana=40000
+                gwarantowany.text="GWARANTOWANA SUMA: \(gwarantowana)"
                 break
             default: break
                
@@ -110,6 +121,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                 answersList.cellForRow(at: [0,data[numbers[i]].Corect])?.backgroundColor=#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
                 answersList.cellForRow(at: indexPath)?.isSelected=false
                 self.questionLabel.text="!!!PRZEGRAŁEŚ!!!\n dostajesz \(gwarantowana)"
+                questionLabel.textAlignment = NSTextAlignment.center
                 run(after: 2){
                     
                     self.performSegue(withIdentifier: "goBack", sender: nil)
