@@ -17,14 +17,53 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var progres: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answersList: UITableView!
+    let alert = UIAlertController(title: "Gratulacje", message: "Zakwalifikowałeś się do TOP10 \n Podaj imie do tabeli wyników", preferredStyle: .alert)
+
     var cellReuseIdentifier = "cell"
     var data = Menager.getQuestionsFromFile()
     
     var numbers = Array<Int>()
     var i = 0
     var gwarantowana = 0
+    var player: ScoreV.Score = try! ScoreV.getScores()[0]
     override func viewDidLoad() {
         super.viewDidLoad()
+        player.score=0
+        alert.addTextField { (textField) in
+            textField.text = "New Player"
+        }
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert!.textFields![0] // Force unwrapping because we know it exists.
+            self.player.name=textField.text ?? "New Player"
+            //TODO dopisanie do pliku
+            let file="topScore"
+            let documentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let fileURL = documentDirURL.appendingPathComponent(file).appendingPathExtension("txt")
+            var content = ""
+            var topPlayers = try! ScoreV.getScores()
+            var iter = 0
+            for score in topPlayers{
+                if(score.score<self.player.score){
+                    topPlayers.insert(self.player, at: iter)
+                    if(topPlayers.count>10){
+                        topPlayers.remove(at: 10)
+                    }
+                    break;
+                }
+                iter+=1
+            }
+            for score in topPlayers{
+                content+="\(score.name)\n\(score.score)\n"
+            }
+            print(content)
+            do{
+                try content.write(to: fileURL, atomically: true, encoding: String.Encoding.unicode)
+            }catch let e as NSError {
+                print(e.debugDescription)
+            }
+            self.performSegue(withIdentifier: "goBack", sender: nil)
+        }))
+        //self.present(alert, animated: true, completion: nil)
         
         qNumLabel.text="\(i+1)"
         if(numbers.count==0){
@@ -92,7 +131,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                
             }
             run(after: 2){
-                
+                self.player.score+=100
                 
                 self.answersList.reloadData()
                 
@@ -112,9 +151,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                 questionLabel.text="!!!WYGRAŁEŚ!!!\n 1000000"
                 questionLabel.textAlignment = NSTextAlignment.center
                 answersList.removeFromSuperview()
-                run(after: 2){
-                    self.performSegue(withIdentifier: "goBack", sender: nil)
-                }
+                
             }
             else{
                 answersList.cellForRow(at: indexPath)?.backgroundColor=#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
@@ -124,6 +161,20 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                 questionLabel.textAlignment = NSTextAlignment.center
                 run(after: 2){
                     
+                }
+            }
+            run(after: 2){
+                var data = try! ScoreV.getScores()
+                var lowestScore = data[0].score
+                for score in data{
+                    if(lowestScore > score.score){
+                        lowestScore = score.score
+                    }
+                }
+                if(lowestScore<self.player.score){
+                    self.present(self.alert, animated: true, completion: nil )
+                }
+                else{
                     self.performSegue(withIdentifier: "goBack", sender: nil)
                 }
             }
@@ -154,6 +205,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         answersList.cellForRow(at: [0,x])?.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         answersList.cellForRow(at: [0,y])?.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         pnpButton.isEnabled=false
+        self.player.score-=50/(self.i+1)
     }
     @IBAction func crudeVoting(_ sender: Any) {
         var ans = [0,0,0,0]
@@ -180,7 +232,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         questionLabel.text="Publiczność zagłosowała:\n A:\(ans[0])%, B:\(ans[1])%, C:\(ans[2])%, D:\(ans[3])%"
         crudeBtn.isEnabled=false
+        self.player.score-=200/(self.i+1)
     }
+    
     @IBAction func telefonDoPrzyjaciela(_ sender: Any) {
         var x=0
         
@@ -190,6 +244,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             x=Int.random(in: 0...3)
         }
          telButt.isEnabled=false
+        self.player.score-=100/(self.i+1)
         switch x{
         case 0:
             questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to A"
@@ -206,6 +261,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         default:
             break
            
+        
         }
     }
     

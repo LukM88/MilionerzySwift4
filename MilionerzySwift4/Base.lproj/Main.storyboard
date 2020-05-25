@@ -37,18 +37,29 @@
                     <connections>
                         <outlet property="tableView" destination="lbB-Qk-lof" id="C5E-GF-iYu"/>
                         <segue destination="pye-ms-Nam" kind="show" identifier="startPlaying" id="8cc-6c-Pr2"/>
+                        <segue destination="JST-qI-pU3" kind="show" identifier="ScoreViewSeg" id="MK1-OP-fnt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1116" y="21.139430284857571"/>
         </scene>
+        <!--Score View-->
+        <scene sceneID="TcH-vP-Ckb">
+            <objects>
+                <viewController id="JST-qI-pU3" customClass="ScoreView" customModule="MilionerzySwift4" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NRG-h2-6GB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9m-Ld-jiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="731"/>
+        </scene>
         <!--View Controller2-->
         <scene sceneID="EzT-G1-aLe">
             <objects>
                 <viewController id="pye-ms-Nam" customClass="ViewController2" customModule="MilionerzySwift4" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goBack" id="Xmo-aq-UTA"/>
+                        <segue destination="vvY-W1-oAW" kind="showDetail" identifier="goBack" id="gcp-Ff-EqB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPi-GS-Nyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -74,8 +85,4 @@
             <point key="canvasLocation" x="176.80000000000001" y="21.139430284857571"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="8cc-6c-Pr2"/>
-        <segue reference="Xmo-aq-UTA"/>
-    </inferredMetricsTieBreakers>
 </document>

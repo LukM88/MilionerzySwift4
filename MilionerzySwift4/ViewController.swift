@@ -46,7 +46,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 0:
             
             performSegue(withIdentifier: "startPlaying", sender: nil)
-        case 1: break
+            break
+        case 1:
+            performSegue(withIdentifier: "ScoreViewSeg", sender: nil)
+            break
             
         default:
             exit(0)

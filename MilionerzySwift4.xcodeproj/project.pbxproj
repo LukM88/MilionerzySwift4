@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70405AA1247AD89300D5F17E /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70405AA0247AD89300D5F17E /* Score.swift */; };
+		70405AA4247BB35D00D5F17E /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70405AA2247BB35D00D5F17E /* ScoreView.swift */; };
+		70405AA5247BB35D00D5F17E /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70405AA3247BB35D00D5F17E /* ScoreView.xib */; };
 		704A653D246AA90500401FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A653C246AA90500401FD6 /* AppDelegate.swift */; };
 		704A653F246AA90500401FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A653E246AA90500401FD6 /* ViewController.swift */; };
 		704A6542246AA90500401FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704A6540246AA90500401FD6 /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70405AA0247AD89300D5F17E /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		70405AA2247BB35D00D5F17E /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		70405AA3247BB35D00D5F17E /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		704A6539246AA90500401FD6 /* MilionerzySwift4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilionerzySwift4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704A653C246AA90500401FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		704A653E246AA90500401FD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 				704A655C246AA97800401FD6 /* JSONObj.swift */,
 				70A99E92246AE6370069FE1C /* ViewController2.swift */,
 				70A99E93246AE6370069FE1C /* ViewController2.xib */,
+				70405AA0247AD89300D5F17E /* Score.swift */,
+				70405AA2247BB35D00D5F17E /* ScoreView.swift */,
+				70405AA3247BB35D00D5F17E /* ScoreView.xib */,
 			);
 			path = MilionerzySwift4;
 			sourceTree = "<group>";
@@ -192,6 +201,7 @@
 				704A6547246AA90800401FD6 /* LaunchScreen.storyboard in Resources */,
 				70FB27B1247597B80043E104 /* data1.txt in Resources */,
 				70A99E95246AE6370069FE1C /* ViewController2.xib in Resources */,
+				70405AA5247BB35D00D5F17E /* ScoreView.xib in Resources */,
 				704A6544246AA90800401FD6 /* Assets.xcassets in Resources */,
 				704A6542246AA90500401FD6 /* Main.storyboard in Resources */,
 			);
@@ -215,6 +225,8 @@
 				70A99E94246AE6370069FE1C /* ViewController2.swift in Sources */,
 				704A655D246AA97800401FD6 /* JSONObj.swift in Sources */,
 				704A653D246AA90500401FD6 /* AppDelegate.swift in Sources */,
+				70405AA1247AD89300D5F17E /* Score.swift in Sources */,
+				70405AA4247BB35D00D5F17E /* ScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
