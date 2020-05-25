@@ -131,7 +131,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                
             }
             run(after: 2){
-                self.player.score+=100
+                self.player.score+=100*self.i+1
                 
                 self.answersList.reloadData()
                 
