@@ -110,7 +110,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         if(tableView.cellForRow(at: indexPath)?.textLabel?.text == data[numbers[i]].Answers[data[numbers[i]].Corect].values.first?.description && i<11){
             
-            progres.progress+=0.083
+                progres.progress+=0.083
             answersList.cellForRow(at: indexPath)?.backgroundColor=#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             answersList.cellForRow(at: indexPath)?.isSelected=false
             
@@ -208,6 +208,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         answersList.cellForRow(at: [0,y])?.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         pnpButton.isEnabled=false
         self.player.score-=50/(self.i+1)
+        pnpButton.alpha=0.1
     }
     @IBAction func crudeVoting(_ sender: Any) {
         var ans = [0,0,0,0]
@@ -235,6 +236,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         questionLabel.text="Publiczność zagłosowała:\n A:\(ans[0])%, B:\(ans[1])%, C:\(ans[2])%, D:\(ans[3])%"
         crudeBtn.isEnabled=false
         self.player.score-=200/(self.i+1)
+        crudeBtn.alpha=0.1
     }
     
     @IBAction func telefonDoPrzyjaciela(_ sender: Any) {
@@ -247,6 +249,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
          telButt.isEnabled=false
         self.player.score-=100/(self.i+1)
+        telButt.alpha=0.1
         switch x{
         case 0:
             questionLabel.text = "Nie jestem pewien ale wydaje mi się że poprawna odpowiedź to A"
@@ -262,7 +265,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             break
         default:
             break
-           
+        
         
         }
     }
