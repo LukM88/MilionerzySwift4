@@ -53,11 +53,7 @@ class ScoreV{
                 j+=2
             }
         }
-        i = 0
-        while i<scores.count {
-            
-            i+=1
-        }
+        
         return scores
     }
 }

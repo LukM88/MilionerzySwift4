@@ -26,9 +26,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     var i = 0
     var gwarantowana = 0
     var player: ScoreV.Score = try! ScoreV.getScores()[0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        player.score=0
+        
         alert.addTextField { (textField) in
             textField.text = "New Player"
         }
@@ -70,13 +71,14 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         numbers.append(Int.random(in: 0...data.count-1))
         }
         questionLabel.text = data[numbers[i]].Question
-        
+        player.score=0
         self.answersList.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         answersList.delegate = self
         answersList.dataSource = self
         answersList.rowHeight = 80
         gwarantowany.text="GWARANTOWANA SUMA: \(gwarantowana)"
-        var x = Int.random(in: 0...data.count-1)
+         view.setGradient(colorOne: #colorLiteral(red: 0.3254901961, green: 0.1058823529, blue: 0.3803921569, alpha: 1),colorTwo: #colorLiteral(red: 0.2823529412, green: 0.368627451, blue: 0.631372549, alpha: 1),colorTree:#colorLiteral(red: 0.3254901961, green: 0.3725490196, blue: 0.5607843137, alpha: 1),colorFour: #colorLiteral(red: 0.6, green: 0.7607843137, blue: 0.9411764706, alpha: 1))
+            var x = Int.random(in: 0...data.count-1)
         var iterator = 0
         while(iterator<12){
             while(numbers.contains(x)){
@@ -86,7 +88,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             x = Int.random(in: 0...data.count-1)
             iterator+=1
         }
-        
         
         // Do any additional setup after loading the view.
     }
@@ -100,6 +101,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.textLabel?.textAlignment = NSTextAlignment.left
         cell.textLabel?.numberOfLines=3
         cell.backgroundColor=#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        //cell.setGradient(colorOne: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), colorTwo: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         return cell
     }
     
@@ -107,11 +109,11 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if(tableView.cellForRow(at: indexPath)?.textLabel?.text == data[numbers[i]].Answers[data[numbers[i]].Corect].values.first?.description && i<11){
-            print()
-            print()
+            
             progres.progress+=0.083
             answersList.cellForRow(at: indexPath)?.backgroundColor=#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             answersList.cellForRow(at: indexPath)?.isSelected=false
+            
             self.i+=1
             qNumLabel.text="\(i+1)"
             switch(i){
@@ -247,16 +249,16 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.player.score-=100/(self.i+1)
         switch x{
         case 0:
-            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to A"
+            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poprawna odpowiedź to A"
             break
         case 1:
-            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to B"
+            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poprawna odpowiedź to B"
             break
         case 2:
-            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to C"
+            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poprawna odpowiedź to C"
             break
         case 3:
-            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poparawna odpowiedź to D"
+            questionLabel.text = "Nie jestem pewien ale wydaje mi się że poprawna odpowiedź to D"
             break
         default:
             break

@@ -16,7 +16,7 @@ class ScoreView: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.setGradient(colorOne: #colorLiteral(red: 0.3254901961, green: 0.1058823529, blue: 0.3803921569, alpha: 1),colorTwo: #colorLiteral(red: 0.2823529412, green: 0.368627451, blue: 0.631372549, alpha: 1),colorTree:#colorLiteral(red: 0.3254901961, green: 0.3725490196, blue: 0.5607843137, alpha: 1),colorFour: #colorLiteral(red: 0.6, green: 0.7607843137, blue: 0.9411764706, alpha: 1))
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
